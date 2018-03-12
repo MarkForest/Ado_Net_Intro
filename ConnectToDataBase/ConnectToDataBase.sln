@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectToDataBase", "ConnectToDataBase\ConnectToDataBase.csproj", "{16456B96-A559-46D0-A663-1389E96E485C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectToDataBaseForInserData", "ConnectToDataBase\ConnectToDataBaseForInserData.csproj", "{16456B96-A559-46D0-A663-1389E96E485C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbDataReaderDemo", "DbDataReaderDemo\DbDataReaderDemo.csproj", "{C2A164E0-4018-4F7E-BA06-9E40D27E516E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{16456B96-A559-46D0-A663-1389E96E485C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16456B96-A559-46D0-A663-1389E96E485C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16456B96-A559-46D0-A663-1389E96E485C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2A164E0-4018-4F7E-BA06-9E40D27E516E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2A164E0-4018-4F7E-BA06-9E40D27E516E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2A164E0-4018-4F7E-BA06-9E40D27E516E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2A164E0-4018-4F7E-BA06-9E40D27E516E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
