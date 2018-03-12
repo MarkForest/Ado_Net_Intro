@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,12 @@ namespace ConnectToDataBase
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("");
+           string connectionString = @"Data Source=CR5-00\SQLEXPRESS; Initial Catalog=Library; Integrated Security=sspi;";
+            
+            SqlConnection connection = new SqlConnection(connectionString);
+            //или
+            //SqlConnection connection = new SqlConnection();
+            //connection.ConnectionString = connectionString;
         }
     }
 }
