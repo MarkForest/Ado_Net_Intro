@@ -13,7 +13,7 @@ namespace DbDataReaderDemo
         {
             string connectionString = @"Data Source=CR5-00\SQLEXPRESS; Initial Catalog=Library; Integrated Security=sspi;";
             SqlConnection connection = new SqlConnection(connectionString);
-            SqlDataReader reader;
+            SqlDataReader reader = null;
 
             try
             {
@@ -30,14 +30,27 @@ namespace DbDataReaderDemo
                         Console.Write(reader.GetName(i).ToString()+" ");
                     }
                     Console.WriteLine("\n");
+                    Console.WriteLine(reader["il"]==null?"Null":"NotNull");
 
                     //Console.WriteLine(reader[0]+ " "+ reader[1]+ " "+reader[2]);
                     Console.WriteLine(reader["id"] + " " + reader["firstname"] + " " + reader["lastname"]);
                 }
             }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             finally
             {
-                connection.Close();
+                if(reader != null)
+                {
+                    reader.Close();
+                }
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+                    
             }
 
             Console.Read();
