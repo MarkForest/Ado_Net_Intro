@@ -17,6 +17,25 @@ namespace ConnectToDataBase
             //или
             //SqlConnection connection = new SqlConnection();
             //connection.ConnectionString = connectionString;
+
+            try
+            {
+                //Открываем соединение
+                connection.Open();
+
+                //Подготавливаем запрос
+                String insertString = @"insert into authors (firstname,lastname)values('Leonel', 'Messi')";
+                //Создаем обьект Command
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = insertString;
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
+  
     }
 }
